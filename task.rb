@@ -148,7 +148,19 @@ end
 
 class UserQ17
   # 以下に回答を記載
+    def initialize(**user)
+        @name = user[:name]
+        @age = user[:age]
+        @gender = user[:gender]
+    end
 
+    def info
+      p <<~A
+      "名前:#{@name}"
+      "年齢:#{@age}"
+      "性別:#{@gender}"
+      A
+    end
 end
 
 def q17
@@ -163,7 +175,14 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(user)
+    @name = user[:name]
+    @age = user[:age]
+  end
 
+  def introduce
+    @age >= 30 ? "こんにちは,#{@name}と申します。宜しくお願いいたします。" : "はいさいまんど〜、#{@name}です！！！"
+  end
 end
 
 def q18
