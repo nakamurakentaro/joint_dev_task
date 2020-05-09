@@ -175,13 +175,17 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  def initialize(user)
-    @name = user[:name]
-    @age = user[:age]
+  def initialize(name:, age:)
+    @name = name
+    @age = age
   end
 
   def introduce
-    @age >= 30 ? "こんにちは,#{@name}と申します。宜しくお願いいたします。" : "はいさいまんど〜、#{@name}です！！！"
+    if @age >= 20 
+      "こんにちは,#{@name}と申します。宜しくお願いいたします。" 
+    else
+       "はいさいまんど〜、#{@name}です！！！"
+    end
   end
 end
 
